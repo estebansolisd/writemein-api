@@ -57,7 +57,7 @@ router.put("/:id", auth, async (req, res) => {
         : { success: false, data: "We couldn't find this todo" }
     );
   } catch (error) {
-    res.status(400).send(error);
+    res.status(400).send(JSON.stringify(error));
   }
 });
 
