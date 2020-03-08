@@ -44,7 +44,7 @@ router.put("/:id", auth, async (req, res) => {
     };
 
     if (req.body.is_completed) {
-      updated_body.finished_at = Date.now();
+      update_body.finished_at = Date.now();
     }
     
     const updateResult = await Todo.updateOne(
