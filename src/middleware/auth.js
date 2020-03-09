@@ -4,7 +4,7 @@ const getTokenData = require("../util/token");
 const auth = async (req, res, next) => {
   const { token_result, token } = getTokenData(req);
   try {
-    const user = await User.findOne({ _id: token_result._id, "tokens.token": token });
+    const user = await User.findOne({ _id: token_result._id });
     if (!user) {
       throw new Error();
     }

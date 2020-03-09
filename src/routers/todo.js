@@ -2,7 +2,6 @@ const express = require("express");
 const Todo = require("../models/Todo");
 const auth = require("../middleware/auth");
 const getTokenData = require("../util/token");
-const mongoose = require("mongoose");
 
 const router = express.Router();
 
