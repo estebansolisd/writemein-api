@@ -26,8 +26,7 @@ const userSchema = mongoose.Schema({
     minLength: 7
   },
   token: {
-    type: String,
-    required: true
+    type: String
   }
 });
 
